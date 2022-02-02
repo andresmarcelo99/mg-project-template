@@ -2,11 +2,31 @@
 
 A cli tool for creating a template project
 
-## Create Template
+## Quick Overview
 
+```sh
+npx mg-create-project
+cd your-project-name
+npm start or npm run start:dev for nest project
 ```
+
+## Creating a new project
+
+**You’ll need to have Node 12 or later version on your local development machine**.
+
+To create a new project, you need enter the following command:
+
+### npx
+
+```sh
 npx mg-create-project
 ```
+
+After entering the command above, the follwing options will pop up.
+
+<p align='center'>
+<img src='./utils/option-list.png' width='600' alt='Build errors'>
+</p>
 
 ## Packages Used
 
