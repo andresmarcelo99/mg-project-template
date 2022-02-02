@@ -32,9 +32,9 @@ This will generate a new project depending the option you choose.
 
 ## Template repos:
 
-[React](https://gitlab.com/marcelo.garcia0/react-typescript) React project using typescript and with redux boilerplate implemented.
+[React](https://gitlab.com/marcelo.garcia0/react-typescript) project using typescript and with redux boilerplate implemented.
 
-[Nest](https://gitlab.com/marcelo.garcia0/nestjs-cqrs) Nest project boilerplate using cqrs and typeorm.
+[Nest](https://gitlab.com/marcelo.garcia0/nestjs-cqrs) project boilerplate using cqrs and typeorm.
 
 ## Packages Used
 
