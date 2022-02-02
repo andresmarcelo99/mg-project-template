@@ -15,12 +15,11 @@ npm start or npm run start:dev for nest project
 
 **You’ll need to have Node 12 or later version on your local development machine**.
 
-To create a new project, you need enter the following commands:
+To create a new project, you need to install ``npm i @marcelogarcia/mg-project-cli` then enter the following command:
 
 ### npx
 
 ```sh
-npm i @marcelogarcia/mg-project-cli
 npx mg-create-project
 ```
 
