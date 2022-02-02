@@ -5,6 +5,8 @@
  * @author Marcelo Garcia
  */
 
+//Dev test
+
 import { createSpinner } from "nanospinner";
 import inquirer from "inquirer";
 import shell from "shelljs";
