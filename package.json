@@ -1,5 +1,5 @@
 {
-  "name": "@marcelo.garcia0/cli-tool",
+  "name": "cli-tool",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
