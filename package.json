@@ -1,22 +1,37 @@
 {
-  "name": "mg-project-cli",
+  "name": "@marcelogarcia/mg-project-cli",
   "version": "1.0.2",
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "url": "https://github.com/andresmarcelo99/github-actions-package"
+  "description": "A CLI to generate a react or nestjs project",
+  "main": "src/index.js",
+  "bin": {
+    "@marcelogarcia/mg-project-cli": "bin/mg-create-project",
+    "mg-create-project": "bin/mg-create-project"
   },
-  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"./**/*.{js,json}\""
   },
-  "keywords": [],
-  "author": "Marcelo Garcia <marcelo.andres99.ma@gmail.com",
+  "keywords": [
+    "cli",
+    "mg-create-project"
+  ],
+  "author": {
+    "name": "Marcelo Garcia",
+    "email": "marcelo.andres99.ma@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.0",
+    "cli-welcome": "^2.2.2",
+    "esm": "^3.2.25",
     "inquirer": "^8.2.0",
     "nanospinner": "^1.0.0",
     "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
