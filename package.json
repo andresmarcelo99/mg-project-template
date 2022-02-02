@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/andresmarcelo99/github-actions-package"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@marcelo.garcia0"
   },
