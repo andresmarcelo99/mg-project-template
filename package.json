@@ -8,6 +8,7 @@
     "mg-create-project": "bin/mg-create-project"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "scripts": {
