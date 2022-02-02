@@ -6,15 +6,12 @@
   "repository": {
     "url": "https://github.com/andresmarcelo99/github-actions-package"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@marcelo.garcia0"
-  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marcelo Garcia <marcelo.andres99.ma@gmail.com",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.0",
