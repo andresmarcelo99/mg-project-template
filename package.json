@@ -1,6 +1,6 @@
 {
   "name": "@marcelogarcia/mg-project-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI to generate a react or nestjs project",
   "main": "src/index.js",
   "bin": {
