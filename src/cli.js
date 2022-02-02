@@ -1,6 +1,6 @@
 /**
  * mg-project-template
- * Cli for generating a react or nest project.
+ * Cli for generating a react or nest project...
  *
  * @author Marcelo Garcia
  */
