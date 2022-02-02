@@ -5,15 +5,17 @@ A cli tool for creating a template project
 ## Create Template
 
 ```
-npx mg-generate
+npx mg-create-project
 ```
 
 ## Packages Used
 
-[chalk](https://github.com/chalk/chalk) |
+[cli-welcome](https://github.com/ahmadawais/cli-welcome) |
+[esm](https://github.com/standard-things/esm) |
 [inquirer](https://github.com/SBoudrias/Inquirer.js) |
-[nanospinner](https://github.com/usmanyunusov/nanospinner)
+[nanospinner](https://github.com/usmanyunusov/nanospinner) |
+[shelljs](https://github.com/shelljs/shelljs)
 
 ```sh
-npm i chalk chalk-animation figlet gradient-string inquirer nanospinner
+npm i cli-welcome esm inquirer nanospinner shelljs
 ```
