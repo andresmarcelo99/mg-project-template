@@ -11,7 +11,7 @@ const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 async function welcome() {
   console.log(`
-    ${chalk.magenta("Welcome!")} 
+    ${chalk.magenta("Welcome!!!")} 
     In this cli you can select a project template...
     Type ${chalk.cyan("react")} to create react template or
     ${chalk.red("nest")} for nest template
