@@ -1,8 +1,8 @@
 {
   "name": "@marcelogarcia/mg-project-cli",
   "version": "1.2.0",
-  "description": "A CLI to generate a react or nestjs project",
-  "main": "src/index.js",
+  "description": "A CLI to generate a react template using typescript and redux or nestjs boilerplate with postgresql, typeorm and cqrs",
+  "main": "src/cli.js",
   "bin": {
     "@marcelogarcia/mg-project-cli": "bin/mg-create-project",
     "mg-create-project": "bin/mg-create-project"
