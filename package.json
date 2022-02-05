@@ -26,6 +26,7 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "cli-welcome": "^2.2.2",
+    "colors": "^1.4.0",
     "esm": "^3.2.25",
     "inquirer": "^8.2.0",
     "nanospinner": "^1.0.0",
