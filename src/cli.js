@@ -1,7 +1,7 @@
 /**
  * mg-project-cli
  * Cli for generating a react or nest project
- *
+ *test 2
  * @author Marcelo Garcia
  */
 
