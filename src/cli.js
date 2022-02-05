@@ -1,5 +1,5 @@
 /**
- * mg-project-template
+ * mg-project-cli
  * Cli for generating a react or nest project
  *
  * @author Marcelo Garcia
@@ -9,8 +9,9 @@ import { createSpinner } from "nanospinner";
 import inquirer from "inquirer";
 import shell from "shelljs";
 import welcome from "cli-welcome";
+import colors from "colors";
 
-import { description, version } from "../package.json";
+import { version, name } from "../package.json";
 
 export async function cli(args) {
   console.clear();
@@ -54,7 +55,7 @@ export async function cli(args) {
       name: "project_name",
       type: "input",
       message: "Project name:",
-      default: "New Project",
+      default: "eg: elden-ring",
     });
     const template_type_question = await inquirer.prompt({
       name: "template_type",
@@ -78,9 +79,13 @@ export async function cli(args) {
   }
 
   welcome({
-    title: `mg-project-template`,
+    title: "mg-project-cli",
     tagLine: `by Marcelo Garcia`,
-    description: description,
+    description: `A CLI to generate a ${colors.cyan(
+      "React"
+    )} template using typescript and redux or\na ${colors.red(
+      "Nestjs"
+    )} boilerplate with postgresql, typeorm and cqrs`,
     version: version,
     bgColor: "#797EF6",
     color: "#000000",
