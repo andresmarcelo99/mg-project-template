@@ -5,12 +5,11 @@
  * @author Marcelo Garcia
  */
 
-//Dev test
-
 import { createSpinner } from "nanospinner";
 import inquirer from "inquirer";
 import shell from "shelljs";
 import welcome from "cli-welcome";
+
 import { description, version } from "../package.json";
 
 export async function cli(args) {
@@ -18,7 +17,7 @@ export async function cli(args) {
 
   const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
-  async function handleAnswer(template, project_name) {
+  async function handleAnswer(template, project_name, start_repository) {
     const spinner = createSpinner("Creating project...\n").start();
     await sleep();
     try {
@@ -32,8 +31,14 @@ export async function cli(args) {
       }
       shell.exec(`git clone ${repoUrl} .`);
       shell.rm("-rf", [".git"]);
+
+      if (start_repository) {
+        shell.exec("git init");
+        console.log("");
+      }
+
       spinner.success({
-        text: `${template} project generated`,
+        text: `${template} project generated 🎈`,
       });
       process.exit(0);
     } catch (error) {
@@ -59,10 +64,16 @@ export async function cli(args) {
       default: "React",
     });
 
-    console.clear();
+    const initialize_repository_question = await inquirer.prompt({
+      name: "start_repository",
+      type: "confirm",
+      message: "test git repository?:",
+    });
+
     handleAnswer(
       template_type_question.template_type,
-      project_name_question.project_name
+      project_name_question.project_name,
+      initialize_repository_question.start_repository
     );
   }
 
