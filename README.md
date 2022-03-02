@@ -37,6 +37,8 @@ This will generate a new project depending the option you choose.
 
 [Nest](https://gitlab.com/marcelo.garcia0/nestjs-cqrs) project boilerplate using cqrs and typeorm.
 
+[This project repo](https://github.com/andresmarcelo99/mg-project-template)
+
 ## Packages Used
 
 [cli-welcome](https://github.com/ahmadawais/cli-welcome) |
