@@ -25,9 +25,7 @@ npx mg-create-project
 
 After entering the commands above, the following options will pop up.
 
-<p align='center'>
-<img src='./utils/option-list.png' width='600' alt='Build errors'>
-</p>
+![cli-example](https://user-images.githubusercontent.com/24013165/157747649-cb81b020-9bd3-459a-a19f-36d5ac5feac0.png)
 
 This will generate a new project depending the option you choose.
 
