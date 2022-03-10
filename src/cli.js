@@ -18,7 +18,12 @@ export async function cli(args) {
 
   const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
-  async function handleAnswer(template, project_name, start_repository) {
+  async function handleAnswer(
+    template,
+    project_name,
+    start_repository,
+    scaffold_crud
+  ) {
     const spinner = createSpinner("Creating project...\n").start();
     await sleep();
     try {
@@ -30,7 +35,11 @@ export async function cli(args) {
       } else {
         repoUrl = "https://gitlab.com/marcelo.garcia0/nestjs-cqrs.git";
       }
-      shell.exec(`git clone ${repoUrl} .`);
+      if (scaffold_crud) {
+        shell.exec(`git clone -b crud-template ${repoUrl} .`);
+      } else {
+        shell.exec(`git clone ${repoUrl} .`);
+      }
       shell.rm("-rf", [".git"]);
 
       if (start_repository) {
@@ -65,23 +74,30 @@ export async function cli(args) {
       default: "React",
     });
 
+    const scaffold_crud_question = await inquirer.prompt({
+      name: "scaffold_crud",
+      type: "confirm",
+      message: "Do you want to scaffold a CRUD?:",
+    });
+
     const initialize_repository_question = await inquirer.prompt({
       name: "start_repository",
       type: "confirm",
-      message: "test git repository?:",
+      message: "Start git repository?:",
     });
 
     handleAnswer(
       template_type_question.template_type,
       project_name_question.project_name,
-      initialize_repository_question.start_repository
+      initialize_repository_question.start_repository,
+      scaffold_crud_question.scaffold_crud
     );
   }
 
   welcome({
     title: "mg-project-cli",
     tagLine: `by Marcelo Garcia`,
-    description: `A CLI to generate a ${colors.cyan(
+    description: `A another test CLI to generate a ${colors.cyan(
       "React"
     )} template using typescript and redux or\na ${colors.red(
       "Nestjs"
